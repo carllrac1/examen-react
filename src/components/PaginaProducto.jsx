@@ -81,12 +81,12 @@ const PaginaProducto = () => {
                             <div className="col-md-8 col-12 pe-5 text-justify">
                                 <div className="row d-flex">
                                     <div className="col-12 col-lg-6 order-1 order-lg-0">
-                                        <h2 className="h4">
+                                        <div className="d-inline h6">
                                             Precio: ${parseFloat(producto.price).toLocaleString()}
                                             <span className="badge bg-success ms-2">
                                                 {Math.round(parseFloat(producto.discount_percentage))}% OFF
                                             </span>
-                                        </h2>
+                                        </div>
                                     </div>
                                     <div className="col-12 col-lg-6 text-lg-end order-0 order-lg-1">
                                         {
@@ -120,6 +120,15 @@ const PaginaProducto = () => {
                                                     <td>{parseInt(producto.stock)} piezas</td>
                                                 </tr>
                                             </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colSpan="2" className='text-center'>
+                                                        <button className="btn btn-success btn-md btn-block">
+                                                            <i className="fas fa-shopping-cart"></i> Agregar al carrito
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
